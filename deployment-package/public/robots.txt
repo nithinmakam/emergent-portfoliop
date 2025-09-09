@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://emergent-portfolio-builder.vercel.app/sitemap.xml
+
+# Allow all crawlers access to CSS and JavaScript files
+User-agent: *
+Allow: /static/css/
+Allow: /static/js/
+
+# Prevent crawling of source maps
+User-agent: *
+Disallow: *.map
