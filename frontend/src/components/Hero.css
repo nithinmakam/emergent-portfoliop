@@ -50,6 +50,12 @@
   padding: var(--spacing-2xl) 0;
 }
 
+/* Ensure content is visible even without animations */
+.hero .animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 400px;
