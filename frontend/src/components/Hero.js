@@ -6,6 +6,14 @@ const Hero = () => {
   const heroRef = useRef(null);
 
   useEffect(() => {
+    // Immediately show content without waiting for intersection observer
+    const elements = heroRef.current?.querySelectorAll('.animate-on-scroll');
+    elements?.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('animate');
+      }, index * 200);
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,7 +25,6 @@ const Hero = () => {
       { threshold: 0.1 }
     );
 
-    const elements = heroRef.current?.querySelectorAll('.animate-on-scroll');
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
