@@ -1,0 +1,151 @@
+.about {
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--spacing-2xl);
+  align-items: start;
+  margin-top: var(--spacing-xl);
+}
+
+.about-content {
+  max-width: 100%;
+}
+
+.about-text h3 {
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.education-content {
+  padding: 0;
+}
+
+.education-item {
+  padding: 0;
+}
+
+.institution {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+}
+
+.degree {
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.duration,
+.type {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.gpa {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.gpa-label {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.gpa-value {
+  font-weight: 600;
+  color: var(--accent-teal);
+  font-size: 1rem;
+}
+
+.languages-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.language-item:hover {
+  background: rgba(0, 123, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.language-name {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .about-details {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    gap: var(--spacing-lg);
+  }
+  
+  .about-details {
+    max-width: 100%;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+  }
+}
